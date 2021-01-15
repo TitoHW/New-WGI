@@ -11,6 +11,13 @@
 
     <link rel="stylesheet" href="css/style.css">
     <title>Print Hasil</title>
+
+    <script type="text/javascript">
+        history.pushState(null, null, location.href);
+        window.onpopstate = function() {
+            history.go(1);
+        };
+    </script>
 </head>
 
 <body>
@@ -46,14 +53,13 @@
                                     <tr>
                                         <td><?php echo $data["name"] ?></td>
                                         <td><?php echo $data["no_id"] ?></td>
-                                        <td><?php echo $data["visit_date"] ?></td>
+                                        <td><?php echo date("d/m/y", strtotime($data["visit_date"])) ?></td>
                                         <td><?php echo $data["tujuan"] ?></td>
                                     </tr>
                                 </tbody>
                             <?php
                             }
 
-                            session_destroy();
                             ?>
 
                         </table>

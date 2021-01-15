@@ -10,7 +10,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>Form Visitor</title>
 </head>
@@ -109,88 +109,88 @@
                         <div class="card-panel">
                             <p>1. Apakah anda sedang/pernah mengalami demam/batuk/pilek/sakit tenggorokan/sesak nafas dalam 14 hari terakhir ?</p>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="1" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="1" />
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="0" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="0" />
                                 <span>No</span>
                             </label>
                         </div>
                         <div class="card-panel">
                             <p>2. Apakah anda sedang / pernah mengalami sakit kepala/nyeri otot/gatal-gatal/infeksi mata/hilang penciuman/sakit perut dalam 14 hari terakhir ?</p>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="1" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="1" />
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="0" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="0" />
                                 <span>No</span>
                             </label>
                         </div>
                         <div class="card-panel">
                             <p>3. Dalam 14 hari terakhir, apakah anda pernah menggunakan transportasi umum? (Bus, Pesawat, Kereta, Kapal dan Moda Transportasi lainnya)</p>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="1" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="1" />
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="0" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="0" />
                                 <span>No</span>
                             </label>
                         </div>
                         <div class="card-panel">
                             <p>4. Dalam 14 hari terakhir, apakah anda pernah mengikuti kegiatan yang dihadiri oleh orang banyak ?</p>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="1" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="1" />
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="0" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="0" />
                                 <span>No</span>
                             </label>
                         </div>
                         <div class="card-panel">
                             <p>5. Dalam 14 hari terakhir, apakah anda pernah melakukan perjalanan keluar kota/negara lain ?</p>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="1" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="1" />
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="0" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="0" />
                                 <span>No</span>
                             </label>
                         </div>
                         <div class="card-panel">
                             <p>6. Dalam 14 hari terakhir, apakah anda pernah keluar rumah / tempat umum ? (pasar, fasilitas kesehatan, kerumunan dan kegiatan lainnya)</p>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="1" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="1" />
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="0" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="0" />
                                 <span>No</span>
                             </label>
                         </div>
                         <div class="card-panel">
                             <p>7. Dalam 14 hari terakhir, apakah anda pernah memiliki riwayat kontak dengan kasus konfirmasi, probable atau suspek COVID-19? <br> - Kontak erat adalah orang yang memiliki riwayat kontak dengan kasus probable atau konfirmasi COVID-19 <br> - Konfirmasi adalah Pasien yang terinfeksi COVID-19 dengan hasil pemeriksaan tes positif melalui pemeriksaan Swab-PCR <br> - Kasus Probable (PDP) adalah kasus suspek dengan ISPA Berat/ARDS***/ meninggal dengan gambaran klinis yang meyakinkan COVID-19 dan belum ada hasil pemeriksaan laboratorium RT-PCR</p>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="1" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="1" />
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="0" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="0" />
                                 <span>No</span>
                             </label>
                         </div>
                         <div class="card-panel">
                             <p>8. Menyatakan bahwa saya memberikan pernyataan dengan sejujur-jujurnya. Apabila dikemudian hari pernyataan saya tdak benar/jujur, saya bersedia untuk bertanggung jawab atas apa yang saya nyatakan. Pastikan data yang anda masukkan sudah benar sebelum menyelesaikan form penilaian online ini.</p>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="1" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="1" />
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in" name="chck" value="0" />
+                                <input type="checkbox" class="filled-in" name="chck[]" value="0" />
                                 <span>No</span>
                             </label>
                         </div>
@@ -241,6 +241,7 @@
         });
     </script>
     <!-- end-scrollspy -->
+
 
 </body>
 

@@ -59,7 +59,7 @@
             <div class="col m4 12">
                 <div class="card">
                     <div class="card-image">
-                        <img src="img/achievement/API-certificate.jpg">
+                        <img src="img/achievement/API-certificate.jpg" class="materialboxed">
                         <span class="card-title">Card Title</span>
                     </div>
                     <div class="card-content">
@@ -71,7 +71,7 @@
             <div class="col m4 12">
                 <div class="card">
                     <div class="card-image">
-                        <img src="img/achievement/API-certificate.jpg">
+                        <img class="materialboxed" src="img/achievement/API-certificate.jpg">
                         <span class="card-title">Card Title</span>
                     </div>
                     <div class="card-content">
@@ -83,7 +83,7 @@
             <div class="col m4 12">
                 <div class="card">
                     <div class="card-image">
-                        <img src="img/achievement/API-certificate.jpg">
+                        <img class="materialboxed" src="img/achievement/API-certificate.jpg">
                         <span class="card-title">Card Title</span>
                     </div>
                     <div class="card-content">
@@ -95,7 +95,7 @@
             <div class="col m4 12">
                 <div class="card">
                     <div class="card-image">
-                        <img src="img/achievement/API-certificate.jpg">
+                        <img class="materialboxed" src="img/achievement/API-certificate.jpg">
                         <span class="card-title">Card Title</span>
                     </div>
                     <div class="card-content">
@@ -107,7 +107,7 @@
             <div class="col m4 12">
                 <div class="card">
                     <div class="card-image">
-                        <img src="img/achievement/API-certificate.jpg">
+                        <img class="materialboxed" src="img/achievement/API-certificate.jpg">
                         <span class="card-title">Card Title</span>
                     </div>
                     <div class="card-content">
@@ -119,7 +119,7 @@
             <div class="col m4 12">
                 <div class="card">
                     <div class="card-image">
-                        <img src="img/achievement/API-certificate.jpg">
+                        <img class="materialboxed" src="img/achievement/API-certificate.jpg">
                         <span class="card-title">Card Title</span>
                     </div>
                     <div class="card-content">
