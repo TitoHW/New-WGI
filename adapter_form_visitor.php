@@ -7,9 +7,9 @@ $phone = $_POST["phone"];
 $email = $_POST["email"];
 $visit_date = $_POST["visit_date"];
 $tujuan = $_POST["tujuan"];
-$chck = $_POST["covid_form"];
+$nilaiCovid = $_POST["covid_form"];
 
-$sql = "insert into tabel_visitor (no_id,name,phone,email,visit_date,tujuan,covid_form) values ('$no_id','$name','$phone','$email','$visit_date','$tujuan','$chck')";
+$sql = "insert into tabel_visitor (no_id,name,phone,email,visit_date,tujuan,covid_form) values ('$no_id','$name','$phone','$email','$visit_date','$tujuan','$nilaiCovid')";
 
 $hasil = mysqli_query($kon, $sql);
 

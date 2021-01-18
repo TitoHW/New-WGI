@@ -65,6 +65,19 @@
           <h5 class="light grey-text text-lighten-3">We serve the best quality product</h5>
         </div>
       </li>
+      <li>
+        <img src="img/home/Fabric Molding Section.jpg" style="opacity: 0.5;">
+        <div class="caption left-align">
+          <h3>Customer is Number one</h3>
+        </div>
+      </li>
+      <li>
+        <img src="img/home/Fabric Storage.jpg" style="opacity: 0.5;">
+        <div class="caption right-align">
+          <h3>Act Like The Owner</h3>
+        </div>
+      </li>
+    </ul>
   </div>
   <!-- akhir slider -->
 
