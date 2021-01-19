@@ -1,6 +1,6 @@
 <?php
 // include database connection file
-include 'connection.php';
+include '../connection.php';
  
 // Get id from URL to delete that user
 $id = $_GET['id'];
@@ -9,5 +9,5 @@ $id = $_GET['id'];
 $result_product = mysqli_query($kon, "DELETE FROM tabel_product WHERE id=$id");
  
 // After delete redirect to Home, so that latest user list will be displayed.
-header("Location:adminPanel.php");
+header("Location:product.php");
 ?>
