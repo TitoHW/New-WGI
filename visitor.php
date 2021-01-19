@@ -112,7 +112,7 @@
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in"/>
+                                <input type="checkbox" class="filled-in" />
                                 <span>No</span>
                             </label>
                         </div>
@@ -123,7 +123,7 @@
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in"/>
+                                <input type="checkbox" class="filled-in" />
                                 <span>No</span>
                             </label>
                         </div>
@@ -134,7 +134,7 @@
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in"/>
+                                <input type="checkbox" class="filled-in" />
                                 <span>No</span>
                             </label>
                         </div>
@@ -145,7 +145,7 @@
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in"/>
+                                <input type="checkbox" class="filled-in" />
                                 <span>No</span>
                             </label>
                         </div>
@@ -156,7 +156,7 @@
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in"/>
+                                <input type="checkbox" class="filled-in" />
                                 <span>No</span>
                             </label>
                         </div>
@@ -167,18 +167,18 @@
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in"/>
+                                <input type="checkbox" class="filled-in" />
                                 <span>No</span>
                             </label>
                         </div>
                         <div class="card-panel">
                             <p>7. Dalam 14 hari terakhir, apakah anda pernah memiliki riwayat kontak dengan kasus konfirmasi, probable atau suspek COVID-19? <br> - Kontak erat adalah orang yang memiliki riwayat kontak dengan kasus probable atau konfirmasi COVID-19 <br> - Konfirmasi adalah Pasien yang terinfeksi COVID-19 dengan hasil pemeriksaan tes positif melalui pemeriksaan Swab-PCR <br> - Kasus Probable (PDP) adalah kasus suspek dengan ISPA Berat/ARDS***/ meninggal dengan gambaran klinis yang meyakinkan COVID-19 dan belum ada hasil pemeriksaan laboratorium RT-PCR</p>
                             <label>
-                                <input type="checkbox" class="filled-in" id="chck" name="chck" onclick="totalIt()"/>
+                                <input type="checkbox" class="filled-in" id="chck" name="chck" onclick="totalIt()" />
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in"/>
+                                <input type="checkbox" class="filled-in" />
                                 <span>No</span>
                             </label>
                         </div>
@@ -189,7 +189,7 @@
                                 <span>Iya</span>
                             </label>
                             <label>
-                                <input type="checkbox" class="filled-in"/>
+                                <input type="checkbox" class="filled-in" />
                                 <span>No</span>
                             </label>
                         </div>
@@ -245,13 +245,14 @@
     <!-- script checkbox -->
     <script>
         var totNilai = 0;
+
         function totalIt() {
             totNilai++;
             console.log('totNilai: ', totNilai);
         }
 
         function kirim() {
-            if (totNilai<5) {
+            if (totNilai < 5) {
                 nilaiCovid.totalIt = 'Rendah';
             } else {
                 nilaiCovid.totalIt = 'Tinggi';
