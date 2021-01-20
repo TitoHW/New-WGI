@@ -110,7 +110,7 @@ $result_achievement= mysqli_query($kon, "SELECT * FROM tabel_achievement ORDER B
                             <a href="message.php"><i class="fa fa-envelope fa-fw"></i> Message</a>
                         </li>
                         <li>
-                            <a href="message.php"><i class="fa fa-commenting fa-fw"></i> About</a>
+                            <a href="about.php"><i class="fa fa-commenting fa-fw"></i> About</a>
                         </li>
 
                         <!-- <li>

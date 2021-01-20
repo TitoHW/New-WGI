@@ -5,13 +5,14 @@ include '../connection.php';
 // Check if form is submitted for user update, then redirect to homepage after update
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
+
     $judul = $_POST['judul'];
     $deskripsi = $_POST['deskripsi'];
     $tanggal = $_POST['tanggal'];
     $foto = $_POST['foto'];
 
     // update user data
-    $result_event = mysqli_query($kon, "UPDATE tabel_event SET judul='$judul',deskripsi='$deskripsi,tanggal='$tanggal',foto='$foto' WHERE id=$id");
+    $result_event = mysqli_query($kon, "UPDATE tabel_event SET judul='$judul',tanggal='$tanggal',deskripsi='$deskripsi',foto='$foto' WHERE id=$id");
 
     // Redirect to homepage to display updated user in list
     header("Location: event.php");
@@ -28,8 +29,8 @@ $result_event = mysqli_query($kon, "SELECT * FROM tabel_event WHERE id=$id");
 while ($dataEvent = mysqli_fetch_array($result_event)) {
     $judul = $dataEvent['judul'];
     $deskripsi = $dataEvent['deskripsi'];
-    $tanggal = $dataEvent['tanggal'];
     $foto = $dataEvent['foto'];
+    $tanggal = $dataEvent['tanggal'];
 }
 ?>
 <html>
@@ -56,7 +57,7 @@ while ($dataEvent = mysqli_fetch_array($result_event)) {
     <!-- Custom Fonts -->
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <title>Edit Achievement</title>
+    <title>Edit Event</title>
 
 </head>
 
@@ -73,23 +74,23 @@ while ($dataEvent = mysqli_fetch_array($result_event)) {
                         <div class="col-lg-12">
                             <form action="edit_event.php" class="form" name="update_event" method="post">
                                 <div class="form-group">
-                                    <label for="judul">judul</label>
-                                    <input type="text" name="judul" value=<?php echo $judul;?>>
+                                    <label for="judul">Judul</label>
+                                    <input type="text" name="judul" value=<?php echo $judul; ?>>
                                 </div>
                                 <div class="form-group">
                                     <label for="deskripsi">Deskripsi</label>
-                                    <input type="text" name="deskripsi" value=<?php echo $deskripsi;?>>
+                                    <input type="text" name="deskripsi" value=<?php echo $deskripsi; ?>>
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggal">Tanggal</label>
-                                    <input type="date" name="tanggal" value=<?php echo $tanggal;?>>
+                                    <input type="date" name="tanggal" value=<?php echo $tanggal; ?>>
                                 </div>
                                 <div class="form-group">
-                                    <label>Pilih File Achievement</label>
-                                    <input type="file" name="foto" value=<?php echo $foto;?>>
+                                    <label>Pilih Foto Produk</label>
+                                    <input type="file" name="foto" value=<?php echo $foto; ?>>
                                 </div>
                                 <div style="margin-top: 50px; text-align: center;">
-                                    <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+                                    <input type="hidden" name="id" value=<?php echo $_GET['id']; ?>>
                                     <button type="submit" id="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" name="update" value="Update">Update</button>
                                 </div>
 

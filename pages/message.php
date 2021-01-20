@@ -1,3 +1,8 @@
+<?php
+include '../connection.php';
+$result_message = mysqli_query($kon, "SELECT * FROM tabel_message ORDER BY id ASC");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Dashboard</title>
+    <title>Message</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -14,8 +19,11 @@
     <!-- MetisMenu CSS -->
     <link href="../css/metisMenu.min.css" rel="stylesheet">
 
-    <!-- Timeline CSS -->
-    <link href="../css/timeline.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link href="../css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../css/dataTables/dataTables.responsive.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../css/startmin.css" rel="stylesheet">
@@ -38,7 +46,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="dashboard.html">G.I ADMINISTRATOR</a>
+                <a class="navbar-brand" href="#">G.I ADMINISTRATOR</a>
             </div>
 
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -48,68 +56,11 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <!-- <ul class="nav navbar-nav navbar-left navbar-top-links">
-                    <li><a href="#"><i class="fa fa-home fa-fw"></i> HOME</a></li>
-                </ul> -->
-
             <ul class="nav navbar-right navbar-top-links">
 
-                <!-- <li class="dropdown navbar-inverse">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu dropdown-alerts">
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-comment fa-fw"></i> New Comment
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                        <span class="pull-right text-muted small">12 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-tasks fa-fw"></i> New Task
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a class="text-center" href="#">
-                                    <strong>See All Alerts</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </li> -->
-
-                <li><a href="#"><i class="fa fa-home fa-fw"></i> HOME</a></li>
+                <li>
+                    <a href="#"><i class="fa fa-home fa-fw"></i> HOME</a>
+                </li>
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -143,7 +94,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="dashboard.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="dashboard.php" class=""><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
 
                         <li>
@@ -210,6 +161,58 @@
             </div>
         </nav>
         <!-- end navigation -->
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Data Message</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <!-- <div class="panel-heading">
+                                <a href="add_event.php" class="btn btn-primary mb-3"><i class="fa fa-plus-square"></i> Tambah Event</a>
+                            </div> -->
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Email</th>
+                                            <th>No. Telephone</th>
+                                            <th>Pesan</th>
+                                            <th>Action</th>
+                                        </tr>
+
+                                        <?php
+                                        while ($dataMessage = mysqli_fetch_array($result_message)) {
+                                            echo "<tr>";
+                                            echo "<td>" . $dataMessage['id'] . "</td>";
+                                            echo "<td>" . $dataMessage['email'] . "</td>";
+                                            echo "<td>" . $dataMessage['telephone'] . "</td>";
+                                            echo "<td>" . $dataMessage['message'] . "</td>";
+                                            echo "<td><a href='delete_message.php? id=$dataMessage[id]' class='btn btn-danger'><i class='fa fa-trash'></i> Delete</a></td>";
+                                            echo "</tr>";
+                                        }
+                                        ?>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
     </div>
     <!-- /#wrapper -->
 
@@ -222,8 +225,21 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../js/metisMenu.min.js"></script>
 
+    <!-- DataTables JavaScript -->
+    <script src="../js/dataTables/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables/dataTables.bootstrap.min.js"></script>
+
     <!-- Custom Theme JavaScript -->
     <script src="../js/startmin.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 
 </body>
 
