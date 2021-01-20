@@ -107,7 +107,10 @@ $result_product = mysqli_query($kon, "SELECT * FROM tabel_product ORDER BY id AS
                             <a href="event.php"><i class="fa fa-calendar fa-fw"></i> Event</a>
                         </li>
                         <li>
-                            <a href="message.php"><i class="fa fa-commenting fa-fw"></i> Message</a>
+                            <a href="message.php"><i class="fa fa-envelope fa-fw"></i> Message</a>
+                        </li>
+                        <li>
+                            <a href="message.php"><i class="fa fa-commenting fa-fw"></i> About</a>
                         </li>
 
                         <!-- <li>

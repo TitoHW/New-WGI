@@ -1,6 +1,6 @@
 <?php
 include '../connection.php';
-$result_achievement= mysqli_query($kon, "SELECT * FROM tabel_achievement ORDER BY id ASC");
+$result_event = mysqli_query($kon, "SELECT * FROM tabel_event ORDER BY id ASC");
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ $result_achievement= mysqli_query($kon, "SELECT * FROM tabel_achievement ORDER B
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Achievement</title>
+    <title>Event</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -166,7 +166,7 @@ $result_achievement= mysqli_query($kon, "SELECT * FROM tabel_achievement ORDER B
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Data Achievement</h1>
+                        <h1 class="page-header">Data Event</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -175,7 +175,7 @@ $result_achievement= mysqli_query($kon, "SELECT * FROM tabel_achievement ORDER B
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a href="add_achievement.php" class="btn btn-primary mb-3"><i class="fa fa-plus-square"></i>  Tambah Achievement</a>
+                                <a href="add_event.php" class="btn btn-primary mb-3"><i class="fa fa-plus-square"></i> Tambah Event</a>
                             </div>
                             <!-- /.panel-heading -->
                             <div class="panel-body">
@@ -184,17 +184,21 @@ $result_achievement= mysqli_query($kon, "SELECT * FROM tabel_achievement ORDER B
                                         <tr>
                                             <th>No</th>
                                             <th>Judul</th>
+                                            <th>Deskripsi</th>
+                                            <th>Tanggal</th>
                                             <th>Foto</th>
                                             <th colspan="2">Action</th>
                                         </tr>
 
                                         <?php
-                                        while ($dataAchieve = mysqli_fetch_array($result_achievement)) {
+                                        while ($dataEvent = mysqli_fetch_array($result_event)) {
                                             echo "<tr>";
-                                            echo "<td>" . $dataAchieve['id'] . "</td>";
-                                            echo "<td>" . $dataAchieve['judul'] . "</td>";
-                                            echo "<td>" . $dataAchieve['foto'] . "</td>";
-                                            echo "<td><a href='edit_achievement.php? id=$dataAchieve[id]' class='btn btn-warning'><i class='fa fa-edit'></i> Edit</a> <a href='delete_achievement.php? id=$dataAchieve[id]' class='btn btn-danger'><i class='fa fa-trash'></i> Delete</a></td>";
+                                            echo "<td>" . $dataEvent['id'] . "</td>";
+                                            echo "<td>" . $dataEvent['judul'] . "</td>";
+                                            echo "<td>" . $dataEvent['deskripsi'] . "</td>";
+                                            echo "<td>" . date("d/m/y", strtotime($dataEvent["tanggal"])) . "</td>";
+                                            echo "<td>" . $dataEvent['foto'] . "</td>";
+                                            echo "<td><a href='edit_event.php? id=$dataEvent[id]' class='btn btn-warning'><i class='fa fa-edit'></i> Edit</a> <a href='delete_event.php? id=$dataEvent[id]' class='btn btn-danger'><i class='fa fa-trash'></i> Delete</a></td>";
                                             echo "</tr>";
                                         }
                                         ?>

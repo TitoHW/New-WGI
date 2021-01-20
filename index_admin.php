@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta http-equiv="refresh" content="0;url=pages/index.html">
-    <title>Startmin</title>
+    <title>Admin Dashboard</title>
     <script language="javascript">
-        window.location.href = "pages/index_admin.html"
+        window.location.href = "pages/dashboard.php"
     </script>
 </head>
 <body>
-<a href="pages/index_admin.html">Go to Demo</a>
+<a href="pages/dashboard.php">Go to Demo</a>
 </body>
 </html>

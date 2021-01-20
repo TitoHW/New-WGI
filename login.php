@@ -29,7 +29,7 @@
                                 <input type="password" name="password" id="password" require>
                                 <label for="password">Password</label>
                             </div>
-                            <button type="submit" class="btn center-align">Login</button>
+                            <button type="submit" class="btn">Login</button>
                         </div>
                     </form>
                 </div>

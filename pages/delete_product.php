@@ -10,4 +10,5 @@ $result_product = mysqli_query($kon, "DELETE FROM tabel_product WHERE id=$id");
  
 // After delete redirect to Home, so that latest user list will be displayed.
 header("Location:product.php");
+
 ?>
